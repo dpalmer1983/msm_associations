@@ -18,11 +18,11 @@
       <% @directors.each do |director| %>
       <tr>
         <td>
-          <img src="<%= director.image_url %>">
+          <img src="<%= director.image_url %>" width=50>
         </td>
         <td><%= director.name %></td>
         <td><%= director.dob %></td>
-        
+
         <td>
           <a href="/directors/<%= director.id %>" class="btn btn-primary">Show</a>
           <a href="/directors/<%= director.id %>/edit" class="btn btn-warning">Edit</a>
