@@ -56,6 +56,10 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
+      <!-- Label and input for movie_id -->
+      <input type="hidden" name="movie_id" value="<%= @movie.id %>">
+
+
       <!-- Label and input for actor_id -->
       <div class="form-group">
         <label for="actor_id" class="control-label">
