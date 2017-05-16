@@ -19,14 +19,13 @@
 
       <dt>Number of characters played</dt>
       <dd><%= Character.where(:actor_id => @actor.id).count %>  </dd>
-
-
+      
       <dt>Filmography</dt>
       <dd>
         <ul>
           <%= Character.where(:actor_id => @actor_id).each do |character| %>
-          <li><%= Actor.find_by(:id => @character.actor_id).name %></li>
-          <li><%= Actor.find_by(:id => @character.actor_id).name %></li>
+          <li><%= Actor.find_by(:id => @characters.actor_id).name %></li>
+          <li><%= Actor.find_by(:id => @characters.actor_id).name %></li>
           <% end %>
         </ul>
 

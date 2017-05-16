@@ -18,14 +18,14 @@
       <dd><%= @movie.description %></dd>
 
       <dt>Number of characters</dt>
-      <dd><%= @movie.character.count %></dd>
+      <dd><%= @movie.characters.count %></dd>
 
       <dt>Names</dt>
       <dd>
         <ul>
-          <% @movie.character.each do |character| %>
+          <% @movie.characters.each do |character| %>
           <li>
-            <a href="/characters/<%= character.id %>"><%= character.actor.name %></a>
+            <a href="/actors/<%= @actor.id %>"><%= character.actor.name %></a>
             (as <a href="/characters/<%= character.id %>"><%= character.name %></a>)
           </li>
           <% end %>
