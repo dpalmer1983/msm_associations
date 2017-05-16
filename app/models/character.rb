@@ -6,6 +6,8 @@ class Character < ApplicationRecord
   validates :actor_id, :presence => true
   # name: no rules
 
-belongs_to(:actor, :class_name => "Actor", :foreign_key => "actor_id" )
+# this is the key that allows you to type @actor.
+  belongs_to(:actor, :class_name => "Actor", :foreign_key => "actor_id" )
 
+  belongs_to(:movie, :class_name => "Movie", :foreign_key => "movie_id" )
 end

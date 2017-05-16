@@ -8,7 +8,9 @@ class CharactersController < ApplicationController
   def show
     @character = Character.find(params[:id])
     @actor = Actor.new
-    
+    @movie = Movie.new
+count_of_characters =
+
     render("characters/show.html.erb")
   end
 

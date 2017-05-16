@@ -18,8 +18,7 @@
       <dd><%= @movie.description %></dd>
 
       <dt>Number of characters</dt>
-      <dd><%= Character.where(:movie_id => @movie.id).count %></dd>
-      <dd><%= @movie.character.count %></dd>
+      <dd><%= @movie.characters.count %></dd>
 
       <dt>Names</dt>
       <dd>
@@ -36,16 +35,18 @@
 
       <dt>Image url</dt>
       <dd>
-        <img src="<%= @movie.image_url %>">
+        <img src="<%= @movie.image_url %>" width = 100>
       </dd>
 
       <dt>Director</dt>
+
       <dd>
         <a href="/directors/<%= @movie.director_id %>">
           <%= @movie.director.name %>
 
         </a>
       </dd>
+
 
     </dl>
 

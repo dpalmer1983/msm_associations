@@ -32,8 +32,8 @@
         <label for="actor_id" class="control-label">
           Actor
         </label>
+        <%= select_tag(:actor_id, options_from_collection_for_select(Actor.all, :id, :name, @character.movie_id), :class => "form-control") %>
 
-        <input type="text" id="actor_id" name="actor_id" placeholder="Actor" class="form-control" value="<%= @character.actor_id %>">
       </div>
 
       <!-- Label and input for name -->
